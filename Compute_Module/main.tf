@@ -16,7 +16,7 @@ resource "aws_instance" "priv_instance1" {
   instance_type = var.instance_type
   subnet_id     = var.private_subnet_id_1
   security_groups = [var.private_sg_id]
-  user_data = file("./Compute_Module/nginx_install.sh")
+  #user_data = file("./Compute_Module/nginx_install.sh")
   key_name = var.key_name
   tags = {
     Name = var.private_tag-1
@@ -28,7 +28,7 @@ resource "aws_instance" "priv_instance2" {
   instance_type = var.instance_type
   subnet_id     = var.private_subnet_id_2
   security_groups = [var.private_sg_id]
-  user_data = file("./Compute_Module/nginx_install.sh")
+  #user_data = file("./Compute_Module/nginx_install.sh")
   key_name = var.key_name
   tags = {
     Name = var.private_tag-2
