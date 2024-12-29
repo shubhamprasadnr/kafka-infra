@@ -143,5 +143,5 @@ variable "private_tag-2" {
 
 variable "key_name" {
   type    = string
-  default = "N.Virginia_key"
+  default = "N.Virginia"
 }
