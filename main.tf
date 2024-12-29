@@ -77,9 +77,4 @@ module "asg_module" {
 
 
 
-module "s3" {
-  source     = "./s3_module"
-
-}
-
 
