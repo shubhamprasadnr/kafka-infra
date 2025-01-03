@@ -1,6 +1,6 @@
 variable "vpc_cidr" {
   type    = string
-  default = "10.0.0.0/16"
+  default = "10.1.0.0/26"
 }
 
 variable "vpc_tenancy" {
@@ -10,12 +10,12 @@ variable "vpc_tenancy" {
 
 variable "vpc_tag_name" {
   type    = string
-  default = "new_vpc-3"
+  default = "kafka-infra-vpc"
 }
 
 variable "pub_subnet1_cidr" {
   type    = string
-  default = "10.0.0.0/27"
+  default = "10.1.0.0/28"
 }
 
 variable "pub_az1" {
@@ -30,7 +30,7 @@ variable "pub_subnet1_tag" {
 
 variable "pub_subnet2_cidr" {
   type    = string
-  default = "10.0.0.32/27"
+  default = "10.1.0.16/28"
 
 }
 
@@ -48,7 +48,7 @@ variable "pub_subnet2_tag" {
 
 variable "priv_subnet1_cidr" {
   type    = string
-  default = "10.0.0.64/27"
+  default = "10.1.0.32/28"
 
 }
 
@@ -64,7 +64,7 @@ variable "priv_subnet1_tag" {
 
 variable "priv_subnet2_cidr" {
   type    = string
-  default = "10.0.0.96/27"
+  default = "10.1.0.48/28"
 
 }
 
@@ -127,17 +127,17 @@ variable "instance_type" {
 
 variable "public_tag-1" {
   type    = string
-  default = "pub_instance1"
+  default = "bastion-host"
 }
 
 variable "private_tag-1" {
   type    = string
-  default = "priv_instance1"
+  default = "kafka-instance"
 }
 
 variable "private_tag-2" {
   type    = string
-  default = "priv_instance2"
+  default = "kafka-instance"
 
 }
 
