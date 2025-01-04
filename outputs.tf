@@ -68,3 +68,8 @@ output "alb_dns_name" {
   value = module.alb_module.alb_dns_name
   
 }
+
+output "vpc_peering_connection_id" {
+  description = "The ID of the VPC Peering Connection"
+  value       = module.vpc_peering_module.vpc_peering_connection_id
+}

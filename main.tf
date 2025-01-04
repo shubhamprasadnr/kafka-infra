@@ -75,6 +75,37 @@ module "asg_module" {
   my_target_group     = module.alb_module.my_target_group
 }
 
+module "vpc_peering_module" {
+  source                = "./VPC_Peering_Module"
+  source_vpc_id         = module.networking_module.vpc_id
+  target_vpc_id         = var.default_vpc_id
+  peer_name             = var.peer_name
+  source_cidr_block     = var.vpc_cidr
+  target_cidr_block     = var.default_vpc_cidr
+  source_route_table_id = module.networking_module.public_route_table_id
+  target_route_table_id = var.default_route_table_id
+}
+
+# Fetch Default VPC Information
+data "aws_vpc" "default" {
+  default = true
+}
+
+# Fetch Default VPC Route Table
+data "aws_route_table" "default" {
+  vpc_id = data.aws_vpc.default.id
+}
+
+# Assign default VPC and Route Table IDs to variables
+output "default_vpc_id" {
+  value = data.aws_vpc.default.id
+}
+
+output "default_route_table_id" {
+  value = data.aws_route_table.default.id
+}
+
+
 
 
 
