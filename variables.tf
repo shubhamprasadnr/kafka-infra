@@ -149,22 +149,21 @@ variable "key_name" {
 
 # VPC Peering Variables
 variable "peer_name" {
-  description = "Tag name for the VPC Peering Connection"
   type        = string
   default     = "Peering-Kafka_VPC-to-Default_VPC"
 }
 
 variable "default_vpc_id" {
-  description = "The ID of the default VPC"
   type        = string
+  default = "vpc-0a85cff2d4ec00a59"
 }
 
 variable "default_vpc_cidr" {
-  description = "CIDR block of the default VPC"
   type        = string
+  default = "172.31.0.0/16"
 }
 
 variable "default_route_table_id" {
-  description = "The route table ID for the default VPC"
   type        = string
+  default = "rtb-09e03a34ad6ae8924"
 }

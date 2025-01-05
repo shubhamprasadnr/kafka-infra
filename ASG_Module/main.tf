@@ -34,11 +34,9 @@ resource "aws_autoscaling_group" "my_asg" {
     version = "$Latest"
   }
 
-  tags = [
-    {
-      key                 = "Name"
-      value               = "kafka-instance"
-      propagate_at_launch = true
-    }
-  ]
+  tag {
+    key                 = "Name"
+    value               = "kafka-instance"
+    propagate_at_launch = true
+  }
 }

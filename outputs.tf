@@ -23,6 +23,16 @@ output "private_subnet-2" {
   value       = module.networking_module.private_subnet-2
 }
 
+output "public_route_table_id" {
+  description = "The IDs of the public route table id"
+  value       = module.networking_module.public_route_table_id
+}
+
+output "private_route_table_id" {
+  description = "The IDs of the private route table id"
+  value       = module.networking_module.private_route_table_id
+}
+
 output "publc_SG" {
   description = "The ID of the created public_SG"
   value       = module.security_module.public_SG

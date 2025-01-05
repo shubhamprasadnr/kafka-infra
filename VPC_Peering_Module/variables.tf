@@ -23,7 +23,12 @@ variable "target_cidr_block" {
   type        = string
 }
 
-variable "source_route_table_id" {
+variable "source_route_table_id_public" {
+  description = "Route table ID of the source VPC"
+  type        = string
+}
+
+variable "source_route_table_id_private" {
   description = "Route table ID of the source VPC"
   type        = string
 }

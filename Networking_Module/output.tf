@@ -22,3 +22,13 @@ output "private_subnet-2" {
   description = "The IDs of the private subnet-2"
   value       = aws_subnet.private_subnet-2.id
 }
+
+output "public_route_table_id" {
+  description = "The IDs of the public route table id"
+  value       = aws_route_table.pubic_RT.id
+}
+
+output "private_route_table_id" {
+  description = "The IDs of the private route table id"
+  value       = aws_route_table.private_RT.id
+}

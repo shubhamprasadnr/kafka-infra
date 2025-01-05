@@ -82,30 +82,9 @@ module "vpc_peering_module" {
   peer_name             = var.peer_name
   source_cidr_block     = var.vpc_cidr
   target_cidr_block     = var.default_vpc_cidr
-  source_route_table_id = module.networking_module.public_route_table_id
+  source_route_table_id_public = module.networking_module.public_route_table_id
+  source_route_table_id_private = module.networking_module.private_route_table_id
   target_route_table_id = var.default_route_table_id
 }
-
-# Fetch Default VPC Information
-data "aws_vpc" "default" {
-  default = true
-}
-
-# Fetch Default VPC Route Table
-data "aws_route_table" "default" {
-  vpc_id = data.aws_vpc.default.id
-}
-
-# Assign default VPC and Route Table IDs to variables
-output "default_vpc_id" {
-  value = data.aws_vpc.default.id
-}
-
-output "default_route_table_id" {
-  value = data.aws_route_table.default.id
-}
-
-
-
 
 
