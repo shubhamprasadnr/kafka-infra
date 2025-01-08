@@ -20,7 +20,7 @@ variable "pub_subnet1_cidr" {
 
 variable "pub_az1" {
   type    = string
-  default = "us-east-1a"
+  default = "ap-south-1a"
 }
 
 variable "pub_subnet1_tag" {
@@ -36,7 +36,7 @@ variable "pub_subnet2_cidr" {
 
 variable "pub_az2" {
   type    = string
-  default = "us-east-1b"
+  default = "ap-south-1b"
 
 }
 
@@ -54,7 +54,7 @@ variable "priv_subnet1_cidr" {
 
 variable "priv_az1" {
   type    = string
-  default = "us-east-1a"
+  default = "ap-south-1a"
 }
 
 variable "priv_subnet1_tag" {
@@ -70,7 +70,7 @@ variable "priv_subnet2_cidr" {
 
 variable "priv_az2" {
   type    = string
-  default = "us-east-1b"
+  default = "ap-south-1b"
 }
 
 variable "priv_subnet2_tag" {
@@ -143,7 +143,7 @@ variable "private_tag-2" {
 
 variable "key_name" {
   type    = string
-  default = "N.Virginia"
+  default = "paritosh"
 }
 
 
@@ -155,7 +155,7 @@ variable "peer_name" {
 
 variable "default_vpc_id" {
   type        = string
-  default = "vpc-0a85cff2d4ec00a59"
+  default = "vpc-059cd6d0259b9b148"
 }
 
 variable "default_vpc_cidr" {
@@ -165,5 +165,5 @@ variable "default_vpc_cidr" {
 
 variable "default_route_table_id" {
   type        = string
-  default = "rtb-09e03a34ad6ae8924"
+  default = "rtb-0c07a7d1096edd699"
 }
